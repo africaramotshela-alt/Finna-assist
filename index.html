@@ -93,7 +93,8 @@ async function loadLeaderboard(){
   const res = await fetch(BACKEND_URL + "/api/users/leaderboard");
   const data = await res.json();
   document.getElementById("leaderboard").innerHTML =
-    data.map(u => "<li>"+u.name+"</li>").join("");
+    data.map(u => `<li>${u.name}</li>`).join("");
+     
 }
 
 setInterval(loadTotal, 3000);
