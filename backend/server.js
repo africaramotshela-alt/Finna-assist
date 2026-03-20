@@ -1,4 +1,5 @@
 
+
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -15,3 +16,19 @@ app.use('/api/messages', require('./routes/messages'));
 mongoose.connect(process.env.MONGO_URI)
 .then(()=> app.listen(process.env.PORT || 5000, ()=>console.log("Server running")))
 .catch(err=>console.log(err));
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
+const xss = require('xss-clean');
+const hpp = require('hpp');
+
+app.use(helmet());
+app.use(xss());
+app.use(hpp());
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100
+});
+app.use(limiter);
+
+app.use('/api/payfast', require('./routes/payfast'));

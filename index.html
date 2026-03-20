@@ -6,10 +6,11 @@
 <title>Finna Assist</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="text-center p-6">
+<body class="text-center py-20 bg-gradient-to-r from-blue-600 to-green-500 text-white">
 
-<h1 class="text-4xl font-bold">Finna Assist</h1>
-<p>Empowering Communities Through the R10 Challenge</p>
+<h1 class="text-5xl font-bold">Finna Assist</h1>
+<p class="mt-4 text-xl">Empowering Communities Through the R10 Challenge.</p>
+<p class="mt-2">Small Contributions, Massive Impact.</p>
 
 <img src="https://picsum.photos/800/300" class="mx-auto mt-4 rounded">
 
@@ -27,7 +28,16 @@
 </div>
 
 <div class="mt-6 space-x-3">
-  <button onclick="donate()" class="bg-blue-600 text-white px-4 py-2 rounded">Donate R10</button>
+
+    <form 
+    action ="https://www.payfast.co.za/eng/process"
+    method="post">
+    <input type="hidden" name="merchant_id" value="YOUR_ID">
+    <input type="hidden" name="merchant_key" value="YOUR_KEY">
+    <input type="hidden" name="amount" value="10.00">
+    <input type="hidden" name="item_name" value="Finna Assist R10 Challenege">
+    <button type="submit" value="Donate R10" class="bg-blue-600 text-white px-4 py-2 rounded">Donate R10</button>
+  </form>
   <a href="https://wa.me/27672974266" class="bg-green-500 text-white px-4 py-2 rounded">WhatsApp</a>
 </div>
 
@@ -49,7 +59,7 @@
 <a href="plans.html">Savings Plans</a>
 </div>
 
-
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="round-x1 shadow>"
 <script>
 const BACKEND_URL = "https://finna-assist-backend.onrender.com";
 
