@@ -1,4 +1,3 @@
 [build]
-base = "frontend/FinnaAssist"
   publish = "frontend/FinnaAssist/dist"
   command = "npm run build"
