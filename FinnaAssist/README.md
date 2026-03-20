@@ -14,3 +14,22 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+# Finna Assist Pro
+
+## Features
+- Donation system
+- Signup system
+- Leaderboard
+- WhatsApp integration
+
+## Setup
+1. Add MongoDB URI in backend/.env
+2. Run backend:
+   npm install
+   npm start
+3. Deploy backend and update frontend BACKEND_URL
+
+
