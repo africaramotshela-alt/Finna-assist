@@ -60,8 +60,9 @@
 <a href="savingsplans.html">Savings Plans</a>
 </div>
 
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="round-x1 shadow>"
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="rounded-xl shadow-lg">
 
+<script src="script.js">
 const BACKEND_URL = "https://finna-assist-backend.onrender.com";
 
 async function loadTotal(){
@@ -92,12 +93,10 @@ async function loadLeaderboard(){
   const data = await res.json();
   document.getElementById("leaderboard").innerHTML =
     data.map(u => `<li>${u.name}</li>`).join("");
-     
-}
-
-setInterval(loadTotal, 3000);
+     } setInterval(loadTotal, 3000);
 loadTotal();
 loadLeaderboard();
-
+    </script>
+    
 </body>
 </html>
