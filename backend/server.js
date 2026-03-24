@@ -71,3 +71,5 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use('/api/payfast', require('./routes/payfast'));
+
+app.use('/api/auth', require('./routes/auth'));
