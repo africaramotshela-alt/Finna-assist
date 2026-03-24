@@ -27,7 +27,7 @@
   <p id="counter" class="text-3xl font-bold">R0</p>
 </div>
 
-<div class="mt-6 space-x-3">
+<div class="mt-6 flex flex-col items-center space-y-4">
 
     <form 
     action ="https://www.payfast.co.za/eng/process"
@@ -36,10 +36,10 @@
     <input type="hidden" name="merchant_key" value="7yntcjhuu8aog">
     <input type="hidden" name="amount" value="10.00">
     <input type="hidden" name="item_name" value="Finna Assist R10 Challenege">
-    <button type="submit" value="Donate R10" class="bg-blue-600 text-white px-4 py-2 rounded">Donate R10</button>
+    <button type="submit" value="Donate R10" class="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md">Donate R10</button>
   </form>
-  <div class="inline-block w-4">
-  <a href="https://wa.me/27672974266" class="bg-green-500 text-white px-4 py-2 rounded">WhatsApp</a></div>
+  <div class="mt-6 flex flex-col items-center space-y-4">
+  <a href="https://wa.me/27672974266" class="bg-white text-blue-600 px-6 py-3 rounded-lg text-lg font-semibold shadow-md">WhatsApp</a></div>
 </div>
 
 <div class="mt-10">
@@ -62,9 +62,10 @@
 
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="rounded-xl shadow-lg">
 
-<script src="script.js">
+<script>
 const BACKEND_URL = "https://finna-assist-backend.onrender.com";
-
+</script>
+<script src="script.js">
 async function loadTotal(){
   const res = await fetch(BACKEND_URL + "/api/donations/total");
   const data = await res.json();
